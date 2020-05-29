@@ -18,8 +18,9 @@
 				<header><a class='nav-link'>Basic Operations</a></header>
 				<header><a class='nav-link'>Ranges</a></header>
 				<header><a class='nav-link'>Symbols</a></header>
-				<header><a class='nav-link'></a></header>
-				<header><a class='nav-link'></a></header>
+				<header><a class='nav-link'>Control Structure</a></header>
+				<header><a class='nav-link'>Class Hierarchy</a></header>
+				<header><a class='nav-link'>More Information</a></header>
 			</nav>
 		</section>
 		<section class='main-section'>
@@ -134,13 +135,123 @@
 			</div>
 		</section>
 		<section class='main-section'>
-			<header>Ranges</header>
+			<header><h2>Ranges</h2></header>
 			<p> Ranges is a way simple to manipulation sequences, with (1..10) # printer the numbers between 1 and 10. Other case, ('a'..'z') printer the words between 'a' and 'z' (lowercase). </p>
 		</section>
 		<section>
-			<header>Symbols</header>
+			<header><h2>Symbols</h2></header>
+			<p>Symbols are too text like Strings, only its needs to be filled with character ':'. rather than to use double quotes and belongs to class Symbol.
+			<div>
+				<ol>
+					<li><code> >>puts :symbol </code> p</li>
+					<li><code>symbol</code></li>
+					<li><code>=> nil </code></li>
+					<li><code>>>:symbol.class</code></li>
+					<li><code>=> Symbol</code></li>
+				</ol>
+			</div>
 		</section>
-		
+		<section class='main-section'>
+			<header><h2>Control Structure</h2></header>
+			<h3>Boolean Operation</h3>
+			<p>Very important for knowing Booleans operations, checking whether an expression is true or false require easy manipulation with the following signs: <code> <, >, ==, >=, !=, <=, &&(amd) and || (or)</code>.
+			<div>
+				<ol>
+					<li><code>>> 3>2</code></li>
+					<li><code>=>true</code></li>
+					<li><code>>> 3+4-2 == 6</code></li>
+					<li><code>=> false</code></li>
+				</ol>
+			</div>
+			<h3>If</h3>
+			<p>In Ruby 'if' any Boolean expression is accepted, however each Ruby object has a "Boolean value". False and nil objects are unique with boolean value equal to <code>false</code>.
+			<div>
+				<ol>
+					<li><code>>> name = nil</code></li>
+					<li><code>=> nil</code></li>
+					<li><code>>>if(name)</code></li>
+					<li><code>>>   puts('It would only print if the variable was != null') </code></li>
+					<li><code>>>end</code></li>
+					<li><code>=> nil </code></li>
+					<li><code>>>if(3== 3) </code></li>
+					<li><code>>>  puts '3 is 3'</code></li>
+					<li><code>>>end </code></li>
+					<li><code>=> 3 is 3</code></li>
+				</ol>
+			</div> 
+			<h3>Switch</h3>
+			<p>Choosing a possibility:
+			<div>
+				<ol>
+					<li><code>def choose_car(name)</code></li>
+					<li><code>  case name</code></li>
+					<li><code>  when 'gol'</code></li>
+					<li><code>    'Germany'</code></li>
+					<li><code>  when 'HB20'</code></li>
+					<li><code>    'Japan'</code></li>
+					<li><code>  when 'Mustang'</code></li>
+					<li><code>    'USA'</code></li>
+					<li><code>  end</code></li>
+					<li><code>end</code></li>
+					<li><code>>>puts choose_car('gol')</code></li>
+					<li><code>Germany</code></li>
+					<li><code></code></li>
+				</ol>
+			</div>
+			<h3>Repeating Loop</h3>
+			<p> Using looping repeat saves work.
+			<div>
+				<ol>
+					<li><code>for j in (1..10)</code></li>
+					<li><code>  if( i == 3)</code></li>
+					<li><code>    puts i</code></li>
+					<li><code>  else </code></li>
+					<li><code>    puts 'Blank'</code></li>
+					<li><code>  end</code></li>
+					<li><code>end</code></li>
+				</ol>
+			</div>
+		</section>
+		<section class='main-section'>
+			<header><h2>Class Heirarchy</h2></header>
+			<p>Ruby is a language considered purely object oriented up to the classes and basic types.
+			<div>
+				<ul>
+					<li>Basic Object</li>
+					<li>Object</li>
+					<ul>
+						<li>Modules</li>
+						<ul>
+							<li>Class</li>
+						</ul>
+						<li>Array</li>
+						<li>Numeric</li>
+						<ul>
+							<li>Integer</li>
+							<li>Bignum</li>
+							<li>Float</li>
+						</ul>
+					    <li>Hash</li>
+					    <li>Regex</li>
+					    <li>String</li>
+					    <li>IO</li>
+					    <ul>
+					    	<li>File</li>
+					    </ul>
+					</ul>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<header><h2>More Information</h2></header>
+			<p> For more information, be sure access the full sources of thie documentation.
+			<ul>
+				<li><a href="http://rubylearning.com/satishtalim/numbers_in_ruby.html">RubyLearning.com</a></li>
+				<li><a href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
+				<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
+				<li><a href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
+			</ul> 
+		</section>
 	</main>
 </body>
 </html>
