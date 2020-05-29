@@ -13,11 +13,11 @@
 				<header><a class='nav-link'>Introduction</a></header>
 				<header><a class='nav-link'>Interpreter</a></header>
 				<header><a class='nav-link'>RubyGems</a></header>
-				<header><a class='nav-link'></a>My First Ruby Program</header>
-				<header><a class='nav-link'></a></header>
-				<header><a class='nav-link'></a></header>
-				<header><a class='nav-link'></a></header>
-				<header><a class='nav-link'></a></header>
+				<header><a class='nav-link'>My First Ruby Program</a></header>
+				<header><a class='nav-link'>Typing Vriables and String</a></header>
+				<header><a class='nav-link'>Basic Operations</a></header>
+				<header><a class='nav-link'>Ranges</a></header>
+				<header><a class='nav-link'>Symbols</a></header>
 				<header><a class='nav-link'></a></header>
 				<header><a class='nav-link'></a></header>
 			</nav>
@@ -25,7 +25,7 @@
 		<section class='main-section'>
 			<header><h2>Introduction</h2></header>
 			<p> Ruby is interpreted, high-level, general-purpose programming language. Developed for Yukihiro Matsumoto in Japan, around 90's.</p>
-			<p> Ruby was influenced by Perl, Smallltalk, Eiffel, Ada, Basic and Lisp. His typing is strong and dynamic. Interestingly, it is one of the few languages that were born outside the US-Europe axis that have achieved enormous commercial success. Ruby borned to one language expressive, very easy to read and understood. Facilitating the development and maintenance in the systems written that her.As ruby is a <strong>interpreted language</strong>, an interpreter must be installed on your machine, before to execute any program.
+			<p> Ruby was influenced by Perl, Smallltalk, Eiffel, Ada, Basic and Lisp. His typing is strong and dynamic. Interestingly, it is one of the few languages that were born outside the US-Europe axis that have achieved enormous commercial success. Ruby borned to one language expressive, very easy to read and understood. In Ruby everything is an <strong>Object</strong>. Facilitating the development and maintenance in the systems written that her.As ruby is a <strong>interpreted language</strong>, an interpreter must be installed on your machine, before to execute any program.
 			<p><h3>Ruby Philosofy:</h3>
 			<blockquote cite=''>
 				"Often people, especially computer engineers, focus on the machines. They think, 'By doing this, the machine will run fast. By doing this, the machine will run more effectively. By doing this, the machine will something something something.' They are focusing on machines. But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines. We are the masters. They are the slaves."
@@ -54,21 +54,93 @@
 			<p> By convencion, Ruby source files have the <strong>.rb</strong> file extension. The Ruby coding convention states that file/directory name is lower case of class/module name with .rb extension. For example, flashlight class has name flashlight.rb.
 			<p>You will create one new file and write the following code:
 			<h2> Comments </h2>
-			<div>	
+			<div>
+			    <p> #Print only one message  	
 				<ol>
-					<li>puts 'Hello World'</li>
-					<li>print 'Hello World'</li>
-					<li>p 'Hello World'</li>
+					<li><code>puts 'Hello World'</code></li>
+					<li><code>print 'Hello World'</code></li>
+					<li><code>p 'Hello World'</code></li>
+				</ol>
+				<p>#Print multiple lines
+				<ol>
+					<li><code>=begin</code></li>
+					<li><code>  'Hello life'</code></li>
+					<li><code>  'Hello Universe'</code></li>
+					<li><code>  'Everything Else'</code></li>
+					<li><code>=end</code></li>
 				</ol>
 			</div>
 			<p><strong>Tip:</strong>"Code layout is pretty much up to you; indentation is not significant (but using two-character indentation will make you friends in the community if you plan on distributing your code)."   
 		</section>
 		<section class=" main-section">
-			<header></header> 
+			<header><h2>Typing Variables and Strings</h2></header> 
+			<h3>Typing</h3>
+			<p> Since it does need a type declaration, many think that ruby is poorly typed and therefore the type is not important for the interpreter. In Ruby types are important, it is considere implicitly and dinamically typed. Implicitly typed because its type is rejected <strong> by the </strong> interpreter and dynamically because its type can be modified in execution time.</p>
+			<div>
+				<ol>
+					<li><code> idade = 23</code></li>
+					<li><code>idade = "23"</code></li>
+				</ol>
+			</div>
+			<h3>Variables</h3>
+			<p>Variables are an association between a name and a value. In Ruby, this association is defined for an attribution using a signal <code> = </code>. 
+			<div>
+				<ol>
+					<li><code>year = 2020</code></li>
+				</ol>
+			</div>
+			<p>But, what is type of the variable 'year'. A variable year is the type Fixnum, in Ruby represents interger number. </p> 
+			<p> We have possibility to discovery the type a variable using the method <code>.class</code></p>
+			<div>
+				<ol>
+					<li><code>irb(main):001> num = 87</code></li>
+					<li><code>=> 87</code></li>
+					<li><code>irb(main):002> puts num.class</code></li>
+					<li><code>Fixnum</code></li>
+					<li><code>=>nil</code></li>
+				</ol>
+			</div>
+			<h3>Strings</h3>
+			<p> Objetcs type String in Ruby is delimited that simple quotes or double quotes. </p>
+			<div>
+				<ol>
+					<li><code>irb(main):001:0> now = 'Hello'</code></li>
+					<li><code>=> 'Hello'</code></li>
+					<li><code>irb(main):002:0> now << ' World'</code></li>
+					<li><code>=>'Hello World'</code></li>
+					<li><code>irb(main):003:0> puts now</code></li>
+					<li><code>'Hello World'</code></li>
+					<li><code>=>nil</code></li>
+				</ol>
+			</div>
+			<p>We can interpolation String with simple commands:</p>
+			<div>
+				<ol>
+					<li><code>irb(main):004:0> puts "I said #{now}"</code></li>
+					<li><code>"I said Hello World.</code></li>
+				</ol>
+			</div>
+		</section>
+		<section class='main-section'>
+			<header>Basic Operations</header>
+			<p>Ruby allow to use traditional operations.
+			<div>
+				<li>+ sum</li>
+				<li>- subtraction</li>
+				<li>/ division</li>
+				<li>* multiplication</li>
+				<li>** power</li>
+				<li>% Module (returns The rest of th division)</li>
+			</div>
+		</section>
+		<section class='main-section'>
+			<header>Ranges</header>
+			<p> Ranges is a way simple to manipulation sequences, with (1..10) # printer the numbers between 1 and 10. Other case, ('a'..'z') printer the words between 'a' and 'z' (lowercase). </p>
+		</section>
+		<section>
+			<header>Symbols</header>
 		</section>
 		
 	</main>
-
-
 </body>
 </html>
