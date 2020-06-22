@@ -137,7 +137,7 @@
 				#main-doc{
 					position: relative;
 					margin-left: 0px;
-					margin-top: 200px;
+					margin-top: 20px;
 				}
 			}
 
@@ -337,6 +337,100 @@ symbol
 				
 				</section>
 
+				<section id="Hash" class="main-section">
+					<header>Hash</header>
+					<p> A Hash is a dictionary collectionof unique keys and their values. Hash enumate their values in the order that the corresponding keys were inserted.
+						Accessing a value in a Hash requires using its key.
+					</p>
+
+					<h3> Modes that you can create a hash: </h3>
+					<code>months = {"Jan" => 1, "Fev" => 2, "Mar" => 3}
+months ={:Jan => 1, :Fev => 2, :Mar => 3}
+sport_star = {football:'Messi', baketball: 'Lebron', golf: 'Tiger Woods' }
+			</code>
+					<p>You can access one hash that way </p>
+					
+					<code>sport_star[:golf] #=> Tiger Woods</code>
+					
+					<p> A Hash can be create through its ::new method:</p>
+					
+					<code>utensils = Hash.new
+utensils[:casserole] = 'kitchen'</code>
+					
+					<p>Hashs allow to use any object type: </p>
+					
+					<code>book = {}
+book[:matz] = "Programming in ruby"
+book[:ano] = 2020</code>
+					
+					<p>Hash are also commonly used as a way to have named parameters in functions:</p>
+					
+					<code>Tv_Program.create(name = "Faltão", broadcast = "Globo")
+def self.create(params)
+	@name = params[:name]
+	@broadcast = params[:broadcast]
+end</code>
+					<h3>Methods</h3>
+					
+					<p><strong>Try_convert:</strong> Try to convert <i>obj</i> into a hash, using #to_hash method. Return hash or nil if the object cannot be converted.</p>
+
+					<code> Hash.try_convert({1 => 2})    #=> {1 => 2}
+Hash.try_covert("1 => 2") #=> nil	</code>
+					
+					<p><strong>hash<= other - return true or false :</strong> Return true if hash is subset of the other or equals to other</p>
+
+					<code>guide_galaxy = {marvin: 42, beeblebrox: 71}
+guide_galaxy2 = {marvin: 42, beeblebrox: 71, arthur}
+guide_galaxy <= guide_galaxy2     #= true
+guide_galaxy2 <= guide_galaxy     #= false
+guide_galaxy <= guide_galaxy     #= true</code> 
+
+					<p><strong>hsh[key] = value -> value :</strong> Element assignment.</p>
+					
+					<code>h = {"a" => 100, "b" => 200}
+h["a"] = 9
+h["c"] = 300
+h         #= {"a" => 9, "b" => 200, "c" => 300}
+h.strore("d", 34)
+h         #= {"a" => 9, "b" => 200, "c" => 300, "d" => 34}</code>
+
+					<p><strong>Freeze:</strong> key should not have its value changed while it is in use as a key.
+					
+					<code>a = "a"
+b = "b".freeze
+h = {a => 100, b => 200 }
+h.key(100).equal? a #=> false
+h.key(200).equal? b #=> true</code>
+				
+					<p><strong>assoc(obj) => an_array or nil: </strong> Searches through the hash comparing obj with the key using ==. Returns key-value pair ( in this case key and value) or nil if no match.
+
+					<code>h = { "colors" => ["red", "green", "blue"], "numbers" => [1,2,3,4,5]}
+h.assoc("colors") #=> ["colors",[1,2,3,4,5]] returns an array
+h.assoc("fut")    #=> nil</code>
+
+					<p><strong>clear -> hsh :</strong></p>Removes all key-value pairs from hsh.
+
+					<code>bathroom = {"teeth" => "toobrush", "toilet" => "toilet paper"} #=> {"teeth" => "toobrush", "toilet" => "toilet paper"} 
+bathroom.clear       #=> {}</code>
+
+					<p><strong>compac -> new_hash:</strong> returns a new hash with the nil value/key pair removed.</p>
+
+					<code>h = {a:100, b:false, c:nil }
+h.compac  #=> {a => 100, b => false}</code>
+
+					<p><strong>delete(key) -> value: </strong></p> 
+					
+
+
+
+
+
+
+
+
+
+				</section>
+
 				<section id='Control_Structure' class='main-section'>
 					
 					<header>Control Structure</header>
@@ -435,6 +529,7 @@ end</code>
 						<li><a href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
 						<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
 						<li><a href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
+						<li><a href="https://ruby-doc.org/core-2.5.1/Hash.html">Ruby_doc: Hash</a></li>
 					</ul> 
 				
 				</section>
