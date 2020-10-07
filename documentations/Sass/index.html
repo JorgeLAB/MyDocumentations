@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sass Documentation</title>
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="#">
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+		.scrollText{
+			position: relative;	
+		  overflow: auto;
+	  	height: 850px;
+  		padding: 5px 40px;
+  		line-height: 1.6em;
+  		text-align: justify;
+		}
+
+		.no-gutters {
+  		margin-right: 0;
+  		margin-left: 0;
+		}
+
+		.title-documentation{
+			color: #CF649A;
+		}
+
+		.main-section h2{
+			color: #6B717F;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		.main-section p{
+			color: #6B717F;
+			font-family: 'Source Sans Pro', sans-serif;	
+		}
+
+		pre{
+			background-color: #1B1B32;
+			border-radius: 5px;
+			padding-left: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		pre code{
+			color: #FFF;
+		}
+
+	</style>
+
+</head>
+<body>
+	<main id="main-doc">
+		<!-- Navegation -->
+		<div class="container-fluid py-lg-0 mt-3">	
+			<div class='row no-gutters'>
+  			
+  			<div class='col-sm-4 col-md-4 col-xl-2'>
+					<nav id="navbar" role="tablist" class="nav nav-tabs navbar-vertical-expand-lg navbar-light bg-light ml-2'">
+						<div class="container-xl">
+							<header class="title-documentation"><h2>SASS Documentation</h2></header>
+							<ul class="navbar-nav">
+								<li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+								<li class="nav-item"><a class="nav-link" href="#variables">Variables</a></li>
+								<li class="nav-item"><a class="nav-link" href="#nest_css">Nest CSS</a></li>
+								<li class="nav-item"><a class="nav-link" href="#reusable_css">Reusable CSS</a></li>
+								<li class="nav-item"><a class="nav-link" href="#split_your_styles">Split Your Styles</a></li>
+								<li class="nav-item"><a class="nav-link" href="#sass_function">Sass Function</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+	
+				<div class='col-sm-8 col-md-8 col-xl-10 border-left'>	
+					<div data-spy="scroll" data-target="#nav-bar" data-offset="0" class="scrollText">
+					
+					<section class="main-section" id="introduction">
+						<header><h2>Introduction</h2></header>
+						<p>Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available using basic CSS syntax. Sass makes it easier for developers to simplify and maintain the style sheets for their projects.</p>
+						<p>Sass can extend the CSS language because it is a preprocessor. It takes code written using Sass syntax, and converts it into basic CSS. This allows you to create variables, nest CSS rules into others, and import other Sass files, among other things. The result is more compact, easier to read code.There are two syntaxes available for Sass. The first, known as SCSS (Sassy CSS), is an extension of the syntax of CSS. The second and older syntax, known as the indented syntax (or sometimes just "Sass"), uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties. Files using this syntax have the .sass extension.</p>
+
+						<p>References:</p>
+						<ul class="list-group mb-3 text-center">
+							<li class="list-group-item"><a href="https://sass-lang.com/guide" target="_blank">Sass-lamg.com</a></li>
+							<li class="list-group-item"><a href="https://www.freecodecamp.org/learn/front-end-libraries/sass/" target="_blank">FreeCodeCamp Sass Lessons</a></li>
+							<li class="list-group-item"><a href="https://www.w3schools.com/sass/default.php" target="_blank">W3 Schools Tutorial</a></li>
+						</ul>
+
+					</section>
+					
+					<section class="main-section" id="variables">
+						<header><h2>Variables</h2></header>
+						<p>One feature of Sass that's different than CSS is it uses variables. They are declared and set to store data, similar to JavaScript. In JavaScript, variables are defined using the let and const keywords. In Sass, variables start with a $ followed by the variable name.</p>
+						
+						<pre><code>$main-fonts: Arial, sans-serif;
+$headings-color: green;
+h1{
+font-family: $main-fonts;
+color: green;
+}</code></pre>
+						<strong> One example where variables are useful is when a number of elements need to be the same color. If that color is changed, the only place to edit the code is the variable value. </strong>
+
+					</section>
+					<br />
+
+					<section class="main-section" id="nest_css">
+						<header><h2>Nest CSS</h2></header>
+						<p>Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet. Normally, each element is targeted on a different line to style it, like so:</p>
+						<pre><code>nav{
+background-color: red;
+}
+nav ul{
+list-style: none;
+}
+nav ul li{
+display: inline-block;
+}</code></pre>
+						<p>For a large project, the CSS file will have many lines and rules. This is where nesting can help organize your code by placing child style rules within the respective parent elements:</p>
+						<pre><code>
+nav {
+  background-color: red;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}							
+</code></pre>
+
+
+					</section>
+					
+					<section class="main-section" id="reusable_css">
+						<header><h2>Reusable CSS</h2></header>
+						<p>In Sass, a mixin is a group of CSS declarations that can be reused throughout the style sheet. Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider "box-shadow":</p>
+						<pre><code>
+div {
+  -webkit-box-shadow: 0px 0px 4px #fff;
+  -moz-box-shadow: 0px 0px 4px #fff;
+  -ms-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+}
+						</code></pre>
+						
+						<p>It's a lot of typing to re-write this rule for all the elements that have a box-shadow, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:</p>
+						
+						<pre><code>
+@mixin box-shadow($x, $y, $blur, $c){ 
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}</code></pre>
+					
+						<p>The definition starts with @mixin followed by a custom name. The parameters (the $x, $y, $blur, and $c in the example above) are optional. Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the @include directive:</p>
+						
+						<pre><code>
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}							
+						</code></pre>
+					</section>
+					
+					<section class="main-section" id="split_your_styles">
+						<header><h2>Split your Styles</h2></header>
+						<p>Partials in Sass are separate files that hold segments of CSS code. These are imported and used in other Sass files. This is a great way to group similar code into a module to keep it organized. Names for partials start with the underscore (_) character, which tells Sass it is a small segment of CSS and not to convert it into a CSS file. Also, Sass files end with the .scss file extension. To bring the code in the partial into another Sass file, use the @import directive. </p>
+						<p> For example, if all your mixins are saved in a partial named "_mixins.scss", and they are needed in the "main.scss" file, this is how to use them in the main file: </p>
+						<pre><code>//In the main.scss file
+@import 'mixins'</code></pre>	
+						<p>Note that the underscore and file extension are not needed in the import statement - Sass understands it is a partial. Once a partial is imported into a file, all variables, mixins, and other code are available to use.</p>	
+					</section>
+
+					<section class="main-section" id="sass_function">
+							<header><h2>Sass Function</h2></header>
+							<ul>
+								<li>Sass String</li>
+								<li>Sass Numeric</li>
+								<li>Sass List</li>
+								<li>Sass Map</li>
+								<li>Sass Selector</li>
+								<li>Sass Introspection</li>
+								<li>Sass Color</li>
+							</ul>	
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>
