@@ -7,156 +7,11 @@
 		<meta name="keywords" content="Ruby">
 		<meta name="author" content="Jorge Borges">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			/*Font: W3School; */
-			/* Grid structure */
-			html,
-
-			body{
-				min-width: 290px;
-			}
-
-			header {
-				color: #ad1100;
-				margin: 10px;
-				font-size: 1.8em;
-				font-family: 'Manrope', sans-serif;
-				font-weight: thin;
-			}
-			
-			/* Side navigation */
-
-			#navbar {
-				position: fixed;
-				min-width: 300px;
-				top: 0px;
-				left: 0px;
-				width: 300px;
-				height: 100%;
-				border-right: 2px solid #b61d1d;     
-			}
-
-			#navbar ul{
-				height: 80%;
-				padding: 0;
-				overflow-y: auto;
-				overflow-x: hidden;
-			}
-
-			#navbar li {
-				color: black;
-				border-top: 1px solid;
-				list-style: none;
-				position: relative;
-				width: 100%;
-			}
-
-			#navbar a {
-				display: block;
-				padding: 10px 30px;
-				color: #b61d1d;
-			}
-			
-			.nav-link {
-				text-decoration: none;
-				padding: 20px 0px 20px 0px;
-				font-family: 'Josefin Sans', sans-serif;  
-			}
-			
-			/*Content*/
-			#main-doc {
-				position: absolute;
-				margin-left: 310px;
-				padding: 20px;
-				margin-bottom: 110px;
-				text-align: justify;
-			}
-
-			#main-doc header{
-				text-align: left;
-				margin: 0px;
-			}
-
-			section article{
-				margin:  15px;
-				font-size: 1em;
-				display: block;
-			}
-
-			section li{
-				margin: 15px 0px 0px 20px;
-			}
-			/*
-			p {
-				text-align: justify;
-				margin-left: 40px;
-				font-family: 'Josefin Sans', sans-serif;
-				font-size: 1.2em;
-			}
-			*/
-
-			code {
-				display: block;
-				text-align: initial; 
-				white-space: pre;
-				position: relative;
-				word-break: normal; 
-				word-wrap: normal; 
-				line-height: 2;
-				background-color: #f7f7f7;
-				padding: 15px;
-				margin: 10px;
-				border-radius: 5px;
-			}
-
-			#More_Information li{
-				list-style: none;
-				padding: 5px; 
-			}
-
-			@media only screen and (max-width: 815px){
-			
-				#navbar ul{
-					border: 1px solid;
-					height: 207px;
-					margin: 20px;
-				}
-
-				#navbar {
-					background-color: white;
-					position: relative;
-					top: 0;
-					padding: 0;
-					margin: 0;
-					width: 100%;
-					max-height: 270px;
-					border: none;	
-					z-index: 1;
-				}
-
-				#main-doc{
-					position: relative;
-					margin-left: 0px;
-					margin-top: 20px;
-				}
-			}
-
-			@media only screen and(max-width: 400px){
-				#main-doc{
-					margin-left: -10px;
-				}
-
-			code {
-					margin-left: -10px;
-					width: 100%;
-					padding: 10px 35px 35px 10px;
-					min-width: 200px;
-					font-size: 0.9em;
-				}
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../estilos/ruby_documentation_estilos.css">
 	</head>
 	<body>
+	<!-- Essa documentação nasceu como um projeto para o site FreeCodeCamp, utilizando css puro -->
+
 	<!--Project 4 - Responsive Web FreeCodeCamp -->
 	<!--(1) I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). ok-->
 	<!--(2) Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. ok -->
@@ -173,34 +28,35 @@
 	<!--(13) When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. ok-->
 	<!--(14) On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
 	<!--(15) My Technical Documentation page should use at least one media query. -->
-			<nav id='navbar'>
-				<header>Ruby Documentation</header>
-				<ul>  
-					<li><a class='nav-link' href="#Introduction">Introduction</a></li>
-					<li><a class='nav-link' href='#Interpreters'>Interpreters</a></li>
-					<li><a class='nav-link' href='#RubyGems'>RubyGems</a></li>
-					<li><a class='nav-link' href='#My_First_Ruby_Program'>My First Ruby Program</a></li>
-					<li><a class='nav-link' href='#Typing_Variables_and_Strings'>Typing Variables and Strings</a></li>
-					<li><a class='nav-link' href='#Basic_Operations'>Basic Operations</a></li>
-					<li><a class='nav-link' href='#Ranges'>Ranges</a></li>
-					<li><a class='nav-link' href='#Symbols'>Symbols</a></li>
-					<li><a class='nav-link' href='#Control_Structure'>Control Structure</a></li>
-					<li><a class='nav-link' href='#Class_Hierarchy'>Class Hierarchy</a></li>
-					<li><a class='nav-link' href='#More_Information'>More Information</a></li>
-				</ul>
-			</nav>
-			<main id='main-doc'>
-				<section id='Introduction' class='main-section'>
-					<header>Introduction</header>
-					<article>
-						<p> Ruby is interpreted, high-level, general-purpose programming language. Developed for Yukihiro Matsumoto in Japan, around 90's.</p>
-						<p> Ruby was influenced by Perl, Smallltalk, Eiffel, Ada, Basic and Lisp. His typing is strong and dynamic. Interestingly, it is one of the few languages that were born outside the US-Europe axis that have achieved enormous commercial success. Ruby borned to one language expressive, very easy to read and understood. In Ruby everything is an <strong>Object</strong>. Facilitating the development and maintenance in the systems written that her.As ruby is a <strong>interpreted language</strong>, an interpreter must be installed on your machine, before to execute any program.
-						<p><h3>Ruby Philosofy:</h3>
-						<blockquote cite=''>
-							"Often people, especially computer engineers, focus on the machines. They think, 'By doing this, the machine will run fast. By doing this, the machine will run more effectively. By doing this, the machine will something something something.' They are focusing on machines. But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines. We are the masters. They are the slaves."
-						</blockquote> 
-																															<i>- Matsumoto citation</i>
-					</article>
+	
+		<nav id='navbar'>
+			<header>Ruby Documentation</header>
+			<ul>  
+				<li><a class='nav-link' href="#Introduction">Introduction</a></li>
+				<li><a class='nav-link' href='#Interpreters'>Interpreters</a></li>
+				<li><a class='nav-link' href='#RubyGems'>RubyGems</a></li>
+				<li><a class='nav-link' href='#My_First_Ruby_Program'>My First Ruby Program</a></li>
+				<li><a class='nav-link' href='#Typing_Variables_and_Strings'>Typing Variables and Strings</a></li>
+				<li><a class='nav-link' href='#Basic_Operations'>Basic Operations</a></li>
+				<li><a class='nav-link' href='#Ranges'>Ranges</a></li>
+				<li><a class='nav-link' href='#Symbols'>Symbols</a></li>
+				<li><a class='nav-link' href='#Control_Structure'>Control Structure</a></li>
+				<li><a class='nav-link' href='#Class_Hierarchy'>Class Hierarchy</a></li>
+				<li><a class='nav-link' href='#More_Information'>More Information</a></li>
+			</ul>
+		</nav>
+		<main id='main-doc'>
+			<section id='Introduction' class='main-section'>
+				<header>Introduction</header>
+				<article>
+					<p> Ruby is interpreted, high-level, general-purpose programming language. Developed for Yukihiro Matsumoto in Japan, around 90's.</p>
+					<p> Ruby was influenced by Perl, Smallltalk, Eiffel, Ada, Basic and Lisp. His typing is strong and dynamic. Interestingly, it is one of the few languages that were born outside the US-Europe axis that have achieved enormous commercial success. Ruby borned to one language expressive, very easy to read and understood. In Ruby everything is an <strong>Object</strong>. Facilitating the development and maintenance in the systems written that her.As ruby is a <strong>interpreted language</strong>, an interpreter must be installed on your machine, before to execute any program.
+					<p><h3>Ruby Philosofy:</h3>
+					<blockquote cite=''>
+								"Often people, especially computer engineers, focus on the machines. They think, 'By doing this, the machine will run fast. By doing this, the machine will run more effectively. By doing this, the machine will something something something.' They are focusing on machines. But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines. We are the masters. They are the slaves."
+					</blockquote> 
+																																<i>- Matsumoto citation</i>
+				</article>
 				</section>
 				<section id='Interpreters' class='main-section'>
 					<header>Interpreters</header>
@@ -218,25 +74,21 @@
 						</div>
 					</article>
 				</section>
-				
-				<section id='RubyGems' class='main-section'>
 					
+				<section id='RubyGems' class='main-section'>
 					<header>RubyGems</header>
 					<article> 
-						<p> The Gems can be seen as libraries that reusable others codes ruby. RubyGems is a management system the packages, being flexible and efficient.One of the must popular gems is <strong>Rails</strong>.</p>
-					</article>  
-				
+						<p> The Gems can be seen as libraries that reusable others codes ruby. RubyGems is a management system the packages, being flexible andefficient.One of the must popular gems is <strong>Rails</strong>.</p>
+					</article>  	
 				</section>
-				
+					
 				<section id='My_First_Ruby_Program' class='main-section'>
-					
 					<header>My First Ruby Program</header>
-					<article>
-					
+					<article>	
 						<p> By convencion, Ruby source files have the <strong>.rb</strong> file extension. The Ruby coding convention states that file/directory name is lower case of class/module name with .rb extension. For example, flashlight class has name flashlight.rb.</p>
 						<p>You will create one new file and write the following code:</p>
 						<h3> Comments </h3>
-						
+						<!--TODO: Reajuntar impressão de código no browser -->	
 						<code>#Print only one message  
 puts 'Hello World'
 print 'Hello World'
@@ -246,63 +98,46 @@ p 'Hello World'
 	'Hello life'
 	'Hello Universe'
 	'Everything Else'
-=end</code>
-						
+=end</code>	
 						<p><strong>Tip:</strong>"Code layout is pretty much up to you; indentation is not significant (but using two-character indentation will make you friends in the community if you plan on distributing your code)."</p> 
-					
 					</article>
-
 				</section>
-				<section id='Typing_Variables_and_Strings' class=" main-section">
-					
+
+				<section id='Typing_Variables_and_Strings' class=" main-section">		
 					<header>Typing Variables and Strings</header> 
-					
 					<h3>Typing</h3>
-					
 					<p> Since it does need a type declaration, many think that ruby is poorly typed and therefore the type is not important for the interpreter. In Ruby types are important, it is considere implicitly and dinamically typed. Implicitly typed because its type is rejected <strong> by the </strong> interpreter and dynamically because its type can be modified in execution time.</p>
-					
+						
 					<code>idade = 23
 idade = "23"</code>
-					
+						
 					<h3>Variables</h3>
-					
 					<p>Variables are an association between a name and a value. In Ruby, this association is defined for an attribution using a signal  = . 
-					
 					<code>year = 2020</code>
-					
 					<p>But, what is type of the variable 'year'. A variable year is the type Fixnum, in Ruby represents interger number. </p> 
-					
 					<p> We have possibility to discovery the type a variable using the method .class</p>
-					
 					<code>irb(main):001> num = 87
 => 87
 irb(main):002> puts num.class
 Fixnum
 =>nil</code>
-					
 					<h3>Strings</h3>
-					
 					<p> Objetcs type String in Ruby is delimited that simple quotes or double quotes. </p>
-					
 					<code>irb(main):001:0> now = 'Hello'
 => 'Hello'
 irb(main):002:0> now << ' World'
 =>'Hello World'
 irb(main):003:0> puts now
 'Hello World'
-=>nil</code>
-					
+=>nil</code>	
 					<p>We can interpolation String with simple commands:</p>
-					
 					<code>irb(main):004:0> puts "I said #{now}"
 "I said Hello World".</code>
 				</section>
 				
 				<section id='Basic_Operations' class='main-section'>
 					<header>Basic Operations</header>
-					
 					<p>Ruby allow to use traditional operations.
-					
 					<div class='operations-list'>
 						<ol>
 							<li>(+)  sum</li>
@@ -313,140 +148,96 @@ irb(main):003:0> puts now
 							<li>(%)  Module (returns The rest of th division)</li>
 						</ol>
 					</div>
-				
 				</section>
-				
+					
 				<section id='Ranges' class='main-section'>
-				 
 					<header>Ranges</header>
-				 
 					<p> Ranges is a way simple to manipulation sequences, with (1..10) # printer the numbers between 1 and 10. Other case, ('a'..'z') printer the words between 'a' and 'z' (lowercase). </p>
-				
 				</section>
 
 				<section id='Symbols' class='main-section'>
-				 
 					<header>Symbols</header>
-					
 					<p>Symbols are too text like Strings, only its needs to be filled with character ':'. rather than to use double quotes and belongs to class Symbol.</p>
-<code>>>puts :symbol 
+	<code>>>puts :symbol 
 symbol
 => nil 
 >>:symbol.class
 => Symbol</code>
-				
+					
 				</section>
 
 				<section id="Hash" class="main-section">
 					<header>Hash</header>
 					<p> A Hash is a dictionary collectionof unique keys and their values. Hash enumate their values in the order that the corresponding keys were inserted.
-						Accessing a value in a Hash requires using its key.
+							Accessing a value in a Hash requires using its key.
 					</p>
 
 					<h3> Modes that you can create a hash: </h3>
 					<code>months = {"Jan" => 1, "Fev" => 2, "Mar" => 3}
 months ={:Jan => 1, :Fev => 2, :Mar => 3}
 sport_star = {football:'Messi', baketball: 'Lebron', golf: 'Tiger Woods' }
-			</code>
+				</code>
 					<p>You can access one hash that way </p>
-					
 					<code>sport_star[:golf] #=> Tiger Woods</code>
-					
 					<p> A Hash can be create through its ::new method:</p>
-					
 					<code>utensils = Hash.new
 utensils[:casserole] = 'kitchen'</code>
-					
 					<p>Hashs allow to use any object type: </p>
-					
 					<code>book = {}
 book[:matz] = "Programming in ruby"
 book[:ano] = 2020</code>
-					
 					<p>Hash are also commonly used as a way to have named parameters in functions:</p>
-					
 					<code>Tv_Program.create(name = "Faltão", broadcast = "Globo")
 def self.create(params)
 	@name = params[:name]
 	@broadcast = params[:broadcast]
 end</code>
 					<h3>Methods</h3>
-					
 					<p><strong>Try_convert:</strong> Try to convert <i>obj</i> into a hash, using #to_hash method. Return hash or nil if the object cannot be converted.</p>
-
 					<code> Hash.try_convert({1 => 2})    #=> {1 => 2}
 Hash.try_covert("1 => 2") #=> nil	</code>
-					
 					<p><strong>hash<= other - return true or false :</strong> Return true if hash is subset of the other or equals to other</p>
-
 					<code>guide_galaxy = {marvin: 42, beeblebrox: 71}
 guide_galaxy2 = {marvin: 42, beeblebrox: 71, arthur}
 guide_galaxy <= guide_galaxy2     #= true
 guide_galaxy2 <= guide_galaxy     #= false
 guide_galaxy <= guide_galaxy     #= true</code> 
-
 					<p><strong>hsh[key] = value -> value :</strong> Element assignment.</p>
-					
 					<code>h = {"a" => 100, "b" => 200}
 h["a"] = 9
 h["c"] = 300
 h         #= {"a" => 9, "b" => 200, "c" => 300}
 h.strore("d", 34)
 h         #= {"a" => 9, "b" => 200, "c" => 300, "d" => 34}</code>
-
 					<p><strong>Freeze:</strong> key should not have its value changed while it is in use as a key.
-					
 					<code>a = "a"
 b = "b".freeze
 h = {a => 100, b => 200 }
 h.key(100).equal? a #=> false
 h.key(200).equal? b #=> true</code>
-				
 					<p><strong>assoc(obj) => an_array or nil: </strong> Searches through the hash comparing obj with the key using ==. Returns key-value pair ( in this case key and value) or nil if no match.
-
 					<code>h = { "colors" => ["red", "green", "blue"], "numbers" => [1,2,3,4,5]}
 h.assoc("colors") #=> ["colors",[1,2,3,4,5]] returns an array
 h.assoc("fut")    #=> nil</code>
-
 					<p><strong>clear -> hsh :</strong></p>Removes all key-value pairs from hsh.
-
 					<code>bathroom = {"teeth" => "toobrush", "toilet" => "toilet paper"} #=> {"teeth" => "toobrush", "toilet" => "toilet paper"} 
 bathroom.clear       #=> {}</code>
-
 					<p><strong>compac -> new_hash:</strong> returns a new hash with the nil value/key pair removed.</p>
-
 					<code>h = {a:100, b:false, c:nil }
 h.compac  #=> {a => 100, b => false}</code>
-
 					<p><strong>delete(key) -> value: </strong></p> 
-					
-
-
-
-
-
-
-
-
-
 				</section>
 
 				<section id='Control_Structure' class='main-section'>
-					
 					<header>Control Structure</header>
-					
 					<h3>Boolean Operation</h3>
-					
 					<p>Very important for knowing Booleans operations, checking whether an expression is true or false require easy manipulation with the following signs:</p> 
-					
 					<code> <, >, ==, >=, !=, <=, &&(amd) and || (or)</code>
 					<code>>> 3>2
 =>true
 >> 3+4-2 == 6
 => false</code>
-					
 					<h3>If</h3>
-
 					<p>In Ruby 'if' any Boolean expression is accepted, however each Ruby object has a "Boolean value". False and nil objects are unique with boolean value equal to "false".
 					<code> >> name = nil
 => nil
@@ -459,7 +250,6 @@ h.compac  #=> {a => 100, b => false}</code>
 >>end
 => 3 is 3</code>
 					<h3>Switch</h3>
-					
 					<p>Choosing a possibility:</p>
 					<code>def choose_car(name)
   case name
@@ -474,7 +264,6 @@ end
 >>puts choose_car('gol')
 Germany</code>
 					<h3>Repeating Loop</h3>
-
 					<p> Using looping repeat saves work.</p>
 					<code>for j in (1..10)
   if( i == 3)
@@ -484,55 +273,49 @@ Germany</code>
   end
 end</code>
 				</section>
-				
+					
 				<section id='Class_Hierarchy' class='main-section'>
 					<header>Class Hierarchy</header>
-					
-					<p>Ruby is a language considered purely object oriented up to the classes and basic types.</p>
-					
+					<p>Ruby is a language considered purely object oriented up to the classes and basic types.</p>		
 					<div class='types-list'>
+					<ul>
+						<li>Basic Object</li>
+						<li>Object</li>
 						<ul>
-							<li>Basic Object</li>
-							<li>Object</li>
+							<li>Modules</li>
 							<ul>
-								<li>Modules</li>
-								<ul>
-									<li>Class</li>
-								</ul>
-								<li>Array</li>
-								<li>Numeric</li>
-								<ul>
-									<li>Integer</li>
-									<li>Bignum</li>
-									<li>Float</li>
-								</ul>
-								<li>Hash</li>
-								<li>Regex</li>
-								<li>String</li>
-								<li>IO</li>
-								<ul>
-									<li>File</li>
-								</ul>
+								<li>Class</li>
+							</ul>
+							<li>Array</li>
+							<li>Numeric</li>
+							<ul>
+								<li>Integer</li>
+								<li>Bignum</li>
+								<li>Float</li>
+							</ul>
+							<li>Hash</li>
+							<li>Regex</li>
+							<li>String</li>
+							<li>IO</li>
+							<ul>
+								<li>File</li>
 							</ul>
 						</ul>
-					</div>
-
-				</section>
-				
-				<section id='More_Information' class='main-section'>
-					<header>More Information</header>
-
-					<p> For more information, be sure access the full sources of thie documentation.
+					</ul>
+				</div>
+			</section>
 					
-					<ul>
-						<li><a href="http://rubylearning.com/satishtalim/numbers_in_ruby.html">RubyLearning.com</a></li>
-						<li><a href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
-						<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
-						<li><a href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
-						<li><a href="https://ruby-doc.org/core-2.5.1/Hash.html">Ruby_doc: Hash</a></li>
-					</ul> 
-				
-				</section>
-			</main>
+			<section id='More_Information' class='main-section'>
+				<header>More Information</header>
+				<p> For more information, be sure access the full sources of thie documentation.
+				<ul>
+					<li><a href="http://rubylearning.com/satishtalim/numbers_in_ruby.html">RubyLearning.com</a></li>
+					<li><a href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
+					<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
+					<li><a href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
+					<li><a href="https://ruby-doc.org/core-2.5.1/Hash.html">Ruby_doc: Hash</a></li>
+				</ul> 
+			</section>
+		</main>
 	</body>
 </html>
