@@ -4,4 +4,4 @@
 
 #### Em Construção !!!
 
-<img src="public/images/construindo_repositorio.gif" >
+<img align="center" src="public/images/construindo_repositorio.gif" >
