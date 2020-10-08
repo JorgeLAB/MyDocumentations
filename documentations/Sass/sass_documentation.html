@@ -8,53 +8,7 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	
-	<link rel="stylesheet" href="#">
-	
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
-		.scrollText{
-			position: relative;	
-		  overflow: auto;
-	  	height: 850px;
-  		padding: 5px 40px;
-  		line-height: 1.6em;
-  		text-align: justify;
-		}
-
-		.no-gutters {
-  		margin-right: 0;
-  		margin-left: 0;
-		}
-
-		.title-documentation{
-			color: #CF649A;
-		}
-
-		.main-section h2{
-			color: #6B717F;
-			font-family: 'Source Sans Pro', sans-serif;
-		}
-
-		.main-section p{
-			color: #6B717F;
-			font-family: 'Source Sans Pro', sans-serif;	
-		}
-
-		pre{
-			background-color: #1B1B32;
-			border-radius: 5px;
-			padding-left: 20px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		pre code{
-			color: #FFF;
-		}
-
-	</style>
-
+	<link rel="stylesheet" href="../../estilos/sass_documentation_estilo.css">
 </head>
 <body>
 	<main id="main-doc">
@@ -151,9 +105,7 @@ div {
   box-shadow: 0px 0px 4px #fff;
 }
 						</code></pre>
-						
 						<p>It's a lot of typing to re-write this rule for all the elements that have a box-shadow, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:</p>
-						
 						<pre><code>
 @mixin box-shadow($x, $y, $blur, $c){ 
   -webkit-box-shadow: $x $y $blur $c;
@@ -161,9 +113,7 @@ div {
   -ms-box-shadow: $x $y $blur $c;
   box-shadow: $x $y $blur $c;
 }</code></pre>
-					
 						<p>The definition starts with @mixin followed by a custom name. The parameters (the $x, $y, $blur, and $c in the example above) are optional. Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the @include directive:</p>
-						
 						<pre><code>
 div {
   @include box-shadow(0px, 0px, 4px, #fff);
