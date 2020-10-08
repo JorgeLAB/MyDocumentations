@@ -39,6 +39,7 @@
 						<p>References:</p>
 						<ul class="list-group mb-3 text-center">
 							<li class="list-group-item"><a class="link-de-corpo" href="https://nodejs.org/en/" target="_blank">Página Principal NodeJS</a></li>
+							<li class="list-group-item"><a class="link-de-corpo" href="https://youtu.be/SxCjF0t4O3M?list=PLEdPHGYbHhle3ZM7xZaEnPF7RF3d2sUJU" target="_blank">Daniel Aparecido</a></li>
 						</ul>
 
 					</section>
@@ -63,21 +64,78 @@
 
 						<h3>Repare nos arquivos gerados:</h3>
 						<div class="container-fluid">
-
 							<ul class="list-group">
-								<li class="list-item link-de-corpo">app.js    <i class="far fa-hand-point-left"></i></li>
-								<li class="list-item">bin </li> 
-								<li class="list-item">node_modules</li>  
-								<li class="list-item">package.json </li> 
-								<li class="list-item">package-lock.json </li> 
-								<li class="list-item">public </li> 
-								<li class="list-item">routes </li> 
-								<li class="list-item">views</li>
+								<li class="list-group-item link-de-corpo">app.js    <i class="far fa-hand-point-left"></i></li>
+								<li class="list-group-item">bin </li> 
+								<li class="list-group-item">node_modules</li>  
+								<li class="list-group-item">package.json </li> 
+								<li class="list-group-item">package-lock.json </li> 
+								<li class="list-group-item">public </li> 
+								<li class="list-group-item">routes </li> 
+								<li class="list-group-item">views</li>
 							</ul>
-
 						</div>
 
-						<p> Gostaria que reparasse neste arquivo destacado é o principal, onde há os requires e inicio de seu programa </p>
+						<br>
+
+						<p> Gostaria que repara-se neste arquivo destacado é o principal, onde há os requires e inicio de seu programa.</p>
+						<p> Em <strong>bin/www</strong> você encontrará as constifurações de rotas e portas. <strong>WebSever</strong>.</p>
+						<p> Execute:</p>
+						<pre><code>$ node ./bin/www</code></pre>
+
+						<ul class="list-group mt-3 mb-3">
+							<li class="list-group-item">app.js</li>
+							<li class="list-group-item link-de-corpo">bin    <i class="far fa-hand-point-left"></i></li> 
+							<li class="list-group-item">node_modules</li>  
+							<li class="list-group-item link-de-corpo">package.json <i class="far fa-hand-point-left"></i></li> 
+							<li class="list-group-item">package-lock.json </li> 
+							<li class="list-group-item">public </li> 
+							<li class="list-group-item">routes </li> 
+							<li class="list-group-item">views</li>
+						</ul>
+
+						<p> O server será carregado mas podemos abrir o arquivo package.json e reparar o seguinte: </p>
+						<pre><code>"scripts": {
+  "start": "node ./bin/www"
+}</code></pre> 
+						<p> Além de podemos executar o server com <code class="link-de-corpo"> $ node ./bin/www</code> podemos executá-lo com <code  class="link-de-corpo"> $ npm start</code>.</p> 
+
+						<h3>Arquivos Estáticos</h3>
+						<p> Todo arquivo js e css trabalhando do lado do cliente é chamado de estático. Você encontrará e manipulará esses arquivos em:
+
+						<ul class="list-group mt-3 mb-3">
+							<li class="list-group-item">app.js</li>
+							<li class="list-group-item">bin</li> 
+							<li class="list-group-item">node_modules</li>  
+							<li class="list-group-item">package.json </li> 
+							<li class="list-group-item">package-lock.json </li> 
+							<li class="list-group-item link-de-corpo">public       <i class="far fa-hand-point-left"></i></li> 
+							<li class="list-group-item">routes </li> 
+							<li class="list-group-item">views</li>
+						</ul>
+						<br />
+						<h3>Rotas</h3>						
+						<br />
+						<p> Na pasta <strong>routes/</strong> você encontrará os caminhos de sua aplicação.</p>
+						<ul class="list-group mt-3 mb-3">
+							<li class="list-group-item">app.js</li>
+							<li class="list-group-item">bin</li> 
+							<li class="list-group-item">node_modules</li>  
+							<li class="list-group-item">package.json </li> 
+							<li class="list-group-item">package-lock.json </li> 
+							<li class="list-group-item ">public</li> 
+							<li class="list-groupup-item link-de-corpo">routes   <i class="far fa-hand-point-left"></i></li> 
+							<li class="list-group-item">views</li>
+						</ul>
+						<pre><code>var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;</code></pre>
 
 					</section>
 
