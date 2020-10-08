@@ -7,7 +7,7 @@
 
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	
+	<link rel="stylesheet" type="text/css" href="../../estilos/fontawesome-free-5.15.1-web/css/all.css">
 	<link rel="stylesheet" href="../../estilos/node_documentation_estilo.css">
 </head>
 <body>
@@ -38,18 +38,46 @@
 
 						<p>References:</p>
 						<ul class="list-group mb-3 text-center">
-							<li class="list-group-item"><a href="https://nodejs.org/en/" target="_blank">Página Principal NodeJS</a></li>
-							<li class="list-group-item"><a href="https://www.freecodecamp.org/learn/front-end-libraries/sass/" target="_blank">FreeCodeCamp Sass Lessons</a></li>
-							<li class="list-group-item"><a href="https://www.w3schools.com/sass/default.php" target="_blank">W3 Schools Tutorial</a></li>
+							<li class="list-group-item"><a class="link-de-corpo" href="https://nodejs.org/en/" target="_blank">Página Principal NodeJS</a></li>
 						</ul>
 
 					</section>
 
 					<section class="main-section" id="introduction">
 						<header><h2>Express</h2></header>
+						
 						<p>Depois de ter realizado a instação do NodeJS iremos fazer a instalação do express em nosso terminal.</p>
+						<p>Framework web rápido, flexível e minimalista Node.js | <a href="https://expressjs.com/pt-br/" class="link-de-corpo"> <strong>Site:</Strong> Express</a></p>
 
 						<pre><code>$ npm install express --save</code></pre>
+
+						<p>Realizada a instalação do express podemos estar o executando realizando a instalação do template <strong>ejs</strong> | <strong><a class="link-de-corpo" href="https://ejs.co/#install">Site: EJS </a> </strong></p>
+						<p> O EJS junta HTML e JS de forma a ser executádo em um único arquivo mesclado.</p>
+
+						<pre><code>$ express create backend --ejs</code></pre> 
+
+						<p>Vamos realizar: </p>
+						<pre><code>$ cd backend && npm install</code></pre>
+
+						<p>Pronto foi realizada a instação das dependências</p>
+
+						<h3>Repare nos arquivos gerados:</h3>
+						<div class="container-fluid">
+
+							<ul class="list-group">
+								<li class="list-item link-de-corpo">app.js    <i class="far fa-hand-point-left"></i></li>
+								<li class="list-item">bin </li> 
+								<li class="list-item">node_modules</li>  
+								<li class="list-item">package.json </li> 
+								<li class="list-item">package-lock.json </li> 
+								<li class="list-item">public </li> 
+								<li class="list-item">routes </li> 
+								<li class="list-item">views</li>
+							</ul>
+
+						</div>
+
+						<p> Gostaria que reparasse neste arquivo destacado é o principal, onde há os requires e inicio de seu programa </p>
 
 					</section>
 
