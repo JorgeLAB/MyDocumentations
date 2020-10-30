@@ -42,6 +42,7 @@
 				<li><a class='nav-link' href='#Symbols'>Symbols</a></li>
 				<li><a class='nav-link' href='#Control_Structure'>Control Structure</a></li>
 				<li><a class='nav-link' href='#Class_Hierarchy'>Class Hierarchy</a></li>
+				<li><a class='nav-link' href='#Ruby_on_rails '>Ruby on rails</a></li>
 				<li><a class='nav-link' href='#More_Information'>More Information</a></li>
 			</ul>
 		</nav>
@@ -104,13 +105,39 @@ p 'Hello World'
 				</section>
 
 				<section id='Typing_Variables_and_Strings' class=" main-section">		
-					<header>Typing Variables and Strings</header> 
+					<header>Typing Variables and Strings - Data types</header> 
 					<h3>Typing</h3>
 					<p> Since it does need a type declaration, many think that ruby is poorly typed and therefore the type is not important for the interpreter. In Ruby types are important, it is considere implicitly and dinamically typed. Implicitly typed because its type is rejected <strong> by the </strong> interpreter and dynamically because its type can be modified in execution time.</p>
 						
 					<code>idade = 23
 idade = "23"</code>
-						
+					
+					<p>Em ruby há 10 tipo de <strong>data types</strong>, mas não falamos em primitivos, já que, tudo em ruby é objeto. Sendo assim podemos a cada tipo desta lista utilizar e definir métodos da própria class.</p>
+
+					<p> Todas as variáveis e constantes refencenciam algum objeto.( Com exceção das variáveis <strong>locais não inicializadas</strong> que não referenciam a nada). A exceção enviada é a <strong>NameError</strong>.</p>
+					<p>As instancias <code>Fixnum</code>, <code>NilClass</code>, <code>TrueClass</code> e <code>FalseClass</code> possuem uma referencia.</p>
+
+					<ul class="list_types">
+						<li><a href="https://www.rubyguides.com/2018/01/ruby-string-methods/" target="_blank">String</a></li>
+						<li><a>Fixnum</a></li>
+						<li><a>Interger</a></li>
+						<li><a>Numeric</a></li>
+						<li><a>Float</a></li>
+						<li><a>Nilclass</a></li>
+						<li><a>Hash</a></li>
+						<li><a>Symbol</a></li>
+						<li><a>Array</a></li>
+						<li><a>Range</a></li>
+					</ul>
+
+					<p> Podemos fazer o seguinte:
+<pre><code>#Como mostrar os métodos de um tipo, como exemplo temos uma String
+nome = "a"
+nome.methods
+# ... irá aparecer uma série de métodos de estáticos 
+</code></pre>
+					
+
 					<h3>Variables</h3>
 					<p>Variables are an association between a name and a value. In Ruby, this association is defined for an attribution using a signal  = . 
 					<code>year = 2020</code>
@@ -121,6 +148,8 @@ idade = "23"</code>
 irb(main):002> puts num.class
 Fixnum
 =>nil</code>
+					<h4>O que é escopo de variável</h4>
+					
 					<h3>Strings</h3>
 					<p> Objetcs type String in Ruby is delimited that simple quotes or double quotes. </p>
 					<code>irb(main):001:0> now = 'Hello'
@@ -304,16 +333,22 @@ end</code>
 					</ul>
 				</div>
 			</section>
+
+			<section id="Ruby_on_rails" class="main-section">
+					<header>Ruby on rails</header>
+
+			</section>
+
 					
 			<section id='More_Information' class='main-section'>
 				<header>More Information</header>
 				<p> For more information, be sure access the full sources of thie documentation.
 				<ul>
-					<li><a href="http://rubylearning.com/satishtalim/numbers_in_ruby.html">RubyLearning.com</a></li>
-					<li><a href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
-					<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
-					<li><a href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
-					<li><a href="https://ruby-doc.org/core-2.5.1/Hash.html">Ruby_doc: Hash</a></li>
+					<li><a target="_blank" href="http://rubylearning.com/satishtalim/numbers_in_ruby.html">RubyLearning.com</a></li>
+					<li><a target="_blank" href="https://www.ruby-lang.org/en/documentation/">Ruby documentetion</a></li>
+					<li><a target="_blank" href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby</a></li>
+					<li><a target="_blank" href="https://www.caelum.com.br/download/caelum-ruby-on-rails-rr71.pdf">Caelum: Agile web development</a></li>
+					<li><a target="_blank" href="https://ruby-doc.org/core-2.5.1/Hash.html">Ruby_doc: Hash</a></li>
 				</ul> 
 			</section>
 		</main>
